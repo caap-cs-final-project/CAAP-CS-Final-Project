@@ -4,8 +4,8 @@ def main():
 		anagrams = {}
 		for word in file:
 			if (len(word) >= 8):
-				letters = word
-				letters = letters.lower()
+				word = word.strip("\n")
+				letters = word.lower()
 				key = "".join(sorted(letters))
 				if key in anagrams:
 					anagrams[key].append(word)
