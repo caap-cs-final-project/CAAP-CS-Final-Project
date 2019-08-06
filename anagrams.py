@@ -1,17 +1,5 @@
-def main():
-	with open("eng_dict.txt", "r") as file:
-		anagrams = {}
-		for word in file:
-			if (len(word) >= 8):
-				letters = word
-				key = "".join(sorted(letters))
-				print(key)
-				break	
-	eng_dict = "eng_dict.txt"
 
-	''.join(sorted([placehodler_for_list]))
-
-	'abceesu' : ['because', 'pretend this is an anagram of because']
+#'abceesu' : ['because', 'pretend this is an anagram of because']
 	
 	# size of this anagram == 2
 	# length of anagram == 7
@@ -48,3 +36,26 @@ def main():
         #
     #######################################################
     
+if __name__ == '__main__':    
+    anagrams ={}
+    official_anagrams = {}
+    with open("eng_dict.txt", "r") as file:
+        words = file.read().splitlines()
+        for word in words:
+            if (len(word) >= 8):
+                letters = word.lower()
+                key = "".join(sorted(letters))
+                if key in anagrams:
+                    anagrams[key].append(word)
+                else:
+                    anagrams[key] = [word]
+
+
+    for key in anagrams:
+        if len(anagrams[key]) > 1:
+            j = {key : anagrams[key]}
+            official_anagrams.update(j)
+    print(official_anagrams)
+
+                    
+                    
