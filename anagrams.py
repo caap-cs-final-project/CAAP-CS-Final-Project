@@ -1,4 +1,5 @@
-
+from random import randint
+import intersting_stuff as yo
 #'abceesu' : ['because', 'pretend this is an anagram of because']
 	
 	# size of this anagram == 2
@@ -35,7 +36,7 @@
     #INTERESTING IDEAS:
         #
     #######################################################
-    
+
 def sort_keys(anagrams):
     #sorts the dictionary keys by length of their values
     #if you want the sorted dictionary you should refrence the sorted keys list
@@ -116,4 +117,16 @@ if __name__ == '__main__':
         print('Length of list: ', len(official_anagrams[sorted_wordlengths[i]]), end=' ')
         print('Length of key: ', len(sorted_wordlengths[i]))
         pass
+
+intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2."))
+if  intent == 1:
+    which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting"))
+    if which == 1:
+        yo.anaception()
+    elif which == 2:
+        yo.anumber()
+    else:
+        print("Goodbye")
+else:
+    print("Goodbye")
 
