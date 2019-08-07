@@ -1,3 +1,5 @@
+from random import randint
+
 
 anagrams = {}
 anagrams_final = {}
@@ -26,8 +28,6 @@ def __init__():
 				if len(anagrams[list_ans]) > 1:
 					j = {list_ans : anagrams[list_ans]}
 					anagrams_final.update(j)
-
-
 
 __init__()
 
@@ -93,5 +93,20 @@ def anaception():
 			print(impress)
 			print("\n**** Here are the interesting Angagrams ****\n")
 			print(anagrams_cool)
-anaception()
->>>>>>> 29fdc7e31bd2ed4af7e4d4a1a41c863e7446f81a
+
+
+def anumber():
+	what = str(input("What is your favorite word? I will give you the most similar anagrams to it. \nEnter Here> "))
+	global anagrams_final
+	impress = []
+	for key in anagrams_final:
+		num = 0
+		for let in key:
+			num += ord(let)
+		if num == sum([ord(i) for i in what]):
+			impress.append(key)
+	print(impress)
+
+
+
+
