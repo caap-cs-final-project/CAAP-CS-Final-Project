@@ -17,6 +17,7 @@ Ismail Youssou - iyoussou@uchicago.edu
     - All group members used lab time in order to finalize the code for the anagrams function 
     - Emily updated README file
     - Sophia added a sorting keys funtion
+    - Emily and Sophia worked on presentation
 
 # Instructions
 Concise instructions on how we should run the program and what the results should look like:
