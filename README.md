@@ -9,11 +9,9 @@ Anagrams Group Project
     -Branson worked on code.
     -Sophia updated README file.
     -Emily created and worked on presentation slides.
-<<<<<<< HEAD
     -Sophia worked on code.
-=======
 # Day 3:
     - All group members used lab time in order to finalize the code for the anagrams function 
-     - Emily updated README file
+    - Emily updated README file
+    - Sophia added a sorting keys funtion
     
->>>>>>> 54b1d3ea53d8fe55f523210c06ecd4923748bb4b
