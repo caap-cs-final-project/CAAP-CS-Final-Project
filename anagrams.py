@@ -74,7 +74,20 @@ def get_anagrams(filename):
             official_anagrams.update(j)
             
     return official_anagrams
-    
+
+def cool_stuff():
+    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2."))
+    if  intent == 1:
+        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting"))
+        if which == 1:
+            yo.anaception()
+        elif which == 2:
+            yo.anumber()
+        else:
+            print("Goodbye")
+    else:
+        print("Goodbye")    
+        
 if __name__ == '__main__': 
     #starts the program and calls all the functions
     official_anagrams = get_anagrams("eng_dict.txt") 
@@ -83,17 +96,7 @@ if __name__ == '__main__':
     #print(sorted_keys)
     for i in range(len(sorted_keys)):
         print(official_anagrams[sorted_keys[i]])
+    having_fun = cool_stuff()
         #pass
 
-intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2."))
-if  intent == 1:
-    which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting"))
-    if which == 1:
-        yo.anaception()
-    elif which == 2:
-        yo.anumber()
-    else:
-        print("Goodbye")
-else:
-    print("Goodbye")
 
