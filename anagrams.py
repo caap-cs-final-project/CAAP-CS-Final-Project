@@ -58,4 +58,5 @@ if __name__ == '__main__':
         if len(anagrams[key]) > 1:
             j = {key : anagrams[key]}
             official_anagrams.update(j)
+   
     print(official_anagrams)
