@@ -53,16 +53,16 @@ def get_anagrams(filename):
     # Creates empty Dictionaries
     anagrams ={}
     official_anagrams = {}
-    with open(filename, "r") as file:
-        words = file.read().splitlines()
-        for word in words:
-            if (len(word) >= 8):
-                letters = word.lower()
-                key = "".join(sorted(letters))
-                if key in anagrams:
-                    anagrams[key].append(word)
-                else:
-                    anagrams[key] = [word]
+    with open(filename, "r") as file: #opens a file to read
+        words = file.read().splitlines() #reads the whole file and splits by line (in the case of the english dictionary, there is only one word per line). Then saves this list of lines to variable names words.
+        for word in words: #goes through each word in the list of words
+            if (len(word) >= 8): #decides if the word is longer than 8 letters and then continues on with the following statements. If it isn't it ignores it.
+                letters = word.lower() #lowercases the word
+                key = "".join(sorted(letters)) #creates a "key" which is basically the word with its letters sorted alphabetically
+                if key in anagrams: #decides if the key is already in the dictionary. If it is continues with the statements below. If not goes to "else:"
+                    anagrams[key].append(word) #adds the 'word' to the key value in the dictionary
+                else: #The key was not in the dictionary and it continues on to the following statements
+                    anagrams[key] = [word]  #creates a new 'key' in the dictionary with the value of the 'word' attached to it.
 
     # Adds anagrams with more than one word to Dictionary official_anagrams
     for key in anagrams:
