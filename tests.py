@@ -94,10 +94,3 @@ def anaception():
 			print("\n**** Here are the interesting Angagrams ****\n")
 			print(anagrams_cool)
 anaception()
-
-
-
-
-
-
-
