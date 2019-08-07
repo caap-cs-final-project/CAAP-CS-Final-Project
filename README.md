@@ -9,4 +9,4 @@ Day 2:
     -Branson worked on code.
     -Sophia updated README file.
     -Emily created and worked on presentation slides.
-    
+    -Sophia worked on code.

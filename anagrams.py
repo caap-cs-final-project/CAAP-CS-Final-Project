@@ -35,11 +35,23 @@
     #INTERESTING IDEAS:
         #
     #######################################################
-    
-if __name__ == '__main__':    
+def sort_keys(anagrams):
+    keys = list(anagrams.keys())
+    for i in range(len(keys)):
+        smallest = len(anagrams[keys[i]])
+        position = i
+        for j in range(i+1, len(keys)):
+            if len(anagrams[keys[j]]) < smallest:
+                smallest = len(anagrams[keys[j]])
+                position = j
+        if not(position == i):
+            keys[i], keys[position] = keys[position], keys[i]
+    return keys
+
+def get_anagrams(filename):
     anagrams ={}
     official_anagrams = {}
-    with open("eng_dict.txt", "r") as file:
+    with open(filename, "r") as file:
         words = file.read().splitlines()
         for word in words:
             if (len(word) >= 8):
@@ -55,7 +67,16 @@ if __name__ == '__main__':
         if len(anagrams[key]) > 1:
             j = {key : anagrams[key]}
             official_anagrams.update(j)
-    print(official_anagrams)
+    return official_anagrams
+    
+if __name__ == '__main__':    
+    official_anagrams = get_anagrams("eng_dict.txt")
+    sorted_keys = sort_keys(official_anagrams)
+    #print(official_anagrams)
+    #print(sorted_keys)
+    for i in range(len(sorted_keys)):
+        print(official_anagrams[sorted_keys[i]])
+        #pass
 
                     
                     
