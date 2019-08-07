@@ -35,6 +35,7 @@
     #INTERESTING IDEAS:
         #
     #######################################################
+    
 def sort_keys(anagrams):
     keys = list(anagrams.keys())
     for i in range(len(keys)):
@@ -49,6 +50,7 @@ def sort_keys(anagrams):
     return keys
 
 def get_anagrams(filename):
+    # Creates empty Dictionaries
     anagrams ={}
     official_anagrams = {}
     with open(filename, "r") as file:
@@ -62,11 +64,12 @@ def get_anagrams(filename):
                 else:
                     anagrams[key] = [word]
 
-
+    # Adds anagrams with more than one word to Dictionary official_anagrams
     for key in anagrams:
         if len(anagrams[key]) > 1:
             j = {key : anagrams[key]}
             official_anagrams.update(j)
+            
     return official_anagrams
     
 if __name__ == '__main__':    
@@ -78,5 +81,3 @@ if __name__ == '__main__':
         print(official_anagrams[sorted_keys[i]])
         #pass
 
-                    
-                    
