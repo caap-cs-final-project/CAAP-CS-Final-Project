@@ -1,7 +1,10 @@
 # CAAP-CS-Final-Project
-Anagrams Group Project
+Anagrams Group Project / Emily Simon - emilysimon@uchicago.edu
+Branson Starr - bwstarr@uchicago.edu
+Sophia Pegues - sophia11@uchicago.edu
+Ismail Youssou - iyoussou@uchicago.edu
 
-# Day 1: 
+# Day 1:
     -Ismail provided psuedocode.
     -Branson and Sophia worked out logic of code.
     -Emily created the github repository, documented code and pushed it.
@@ -15,3 +18,7 @@ Anagrams Group Project
     - Emily updated README file
     - Sophia added a sorting keys funtion
     - Emily and Sophia worked on presentation
+
+# Instructions
+Concise instructions on how we should run the program and what the results should look like:
+    
