@@ -37,8 +37,11 @@
     #######################################################
     
 if __name__ == '__main__':    
-    anagrams ={}
+    # Establishes Dictionaries
+    anagrams = {}
     official_anagrams = {}
+    
+    # Creates anagram out of all of the words longer than eight characters and adds it to Dictionary anagrams
     with open("eng_dict.txt", "r") as file:
         words = file.read().splitlines()
         for word in words:
@@ -50,12 +53,9 @@ if __name__ == '__main__':
                 else:
                     anagrams[key] = [word]
 
-
+    # Adds anagrams with more than one word to Dictionary official_anagrams
     for key in anagrams:
         if len(anagrams[key]) > 1:
             j = {key : anagrams[key]}
             official_anagrams.update(j)
     print(official_anagrams)
-
-                    
-                    
