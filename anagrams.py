@@ -52,6 +52,37 @@ def sort_keys(anagrams):
             keys[i], keys[position] = keys[position], keys[i]
     return keys
 
+def sort_segment(keys):
+    #sorts the dictionary keys by length of their values
+    #if you want the sorted dictionary you should refrence the sorted keys list
+    for i in range(len(keys)):
+        smallest = len(keys[i])
+        position = i
+        for j in range(i+1, len(keys)):
+            if len(keys[j]) < smallest:
+                smallest = len(keys[j])
+                position = j
+        if not(position == i):
+            keys[i], keys[position] = keys[position], keys[i]
+    return keys
+
+def sort_wordlength(sorted_keys,anagrams):
+    #this function sorts the anagrams within the same size by length
+    curr_size = len(anagrams[sorted_keys[0]])
+    start = 0
+    end = 1
+    for i in range(len(sorted_keys)):
+        if curr_size != len(anagrams[sorted_keys[i]]):
+            sorted_keys[start:end] = sort_segment(sorted_keys[start:end])
+            start = i
+            end = i+1
+            curr_size = len(anagrams[sorted_keys[i]])
+        else:
+            end += 1
+    return sorted_keys
+
+
+
 def get_anagrams(filename):
     # Creates empty Dictionaries
     anagrams ={}
@@ -76,27 +107,32 @@ def get_anagrams(filename):
     return official_anagrams
 
 def cool_stuff():
-    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2."))
+    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2. \nType Another number to exit."))
     if  intent == 1:
-        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting"))
+        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting \nType Another number to exit."))
         if which == 1:
             yo.anaception()
         elif which == 2:
             yo.anumber()
         else:
-            print("Goodbye")
+            exit("Goodbye")
     else:
-        print("Goodbye")    
+        exit("Goodbye")
+
         
 if __name__ == '__main__': 
     #starts the program and calls all the functions
     official_anagrams = get_anagrams("eng_dict.txt") 
     sorted_keys = sort_keys(official_anagrams)
+    sortedkeys_by_wordlengths = sort_wordlength(sorted_keys, official_anagrams)
     #print(official_anagrams)
     #print(sorted_keys)
-    for i in range(len(sorted_keys)):
-        print(official_anagrams[sorted_keys[i]])
+    for i in range(len(sorted_keys)): 
+        print(sortedkeys_by_wordlengths[i], official_anagrams[sortedkeys_by_wordlengths[i]])
+        # print('Length of list: ', len(official_anagrams[sortedkeys_by_wordlengths[i]]), end=' ')
+        # print('Length of key: ', len(sortedkeys_by_wordlengths[i]))
+        pass
     having_fun = cool_stuff()
-        #pass
+ 
 
 
