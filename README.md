@@ -1,15 +1,15 @@
 # CAAP-CS-Final-Project
 Anagrams Group Project
 
-Day 1:
+# Day 1 
     -Ismail provided psuedocode.
     -Branson and Sophia worked out logic of code.
     -Emily documented code and pushed it.
-Day 2:
+# Day 2:
     -Branson worked on code.
     -Sophia updated README file.
     -Emily created and worked on presentation slides.
-Day 3:
-    - Emily updated README file
+# Day 3:
     - All group members used lab time in order to finalize the code for the anagrams function 
+     - Emily updated README file
     
