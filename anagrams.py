@@ -37,6 +37,8 @@
     #######################################################
     
 def sort_keys(anagrams):
+    #sorts the dictionary keys by length of their values
+    #if you want the sorted dictionary you should refrence the sorted keys list
     keys = list(anagrams.keys())
     for i in range(len(keys)):
         smallest = len(anagrams[keys[i]])
