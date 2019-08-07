@@ -1,5 +1,9 @@
 # CAAP-CS-Final-Project
 Anagrams Group Project
+Emily Simon - emilysimon@uchicago.edu
+Branson Starr - bwstarr@uchicago.edu
+Sophia Pegues - sophia11@uchicago.edu
+Ismail Youssou - iyoussou@uchicago.edu
 
 # Day 1 
     -Ismail provided psuedocode.
