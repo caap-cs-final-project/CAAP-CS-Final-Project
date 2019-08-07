@@ -9,4 +9,7 @@ Day 2:
     -Branson worked on code.
     -Sophia updated README file.
     -Emily created and worked on presentation slides.
+Day 3:
+    - Emily updated README file
+    - All group members used lab time in order to finalize the code for the anagrams function 
     
