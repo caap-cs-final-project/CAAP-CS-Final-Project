@@ -64,7 +64,7 @@ def get_anagrams(filename):
                 else: #The key was not in the dictionary and it continues on to the following statements
                     anagrams[key] = [word]  #creates a new 'key' in the dictionary with the value of the 'word' attached to it.
 
-    # Adds anagrams with more than one word to Dictionary official_anagrams
+    # Adds anagrams with more than one word to Dictionary "official_anagrams"
     for key in anagrams:
         if len(anagrams[key]) > 1:
             j = {key : anagrams[key]}
@@ -73,8 +73,8 @@ def get_anagrams(filename):
     return official_anagrams
     
 if __name__ == '__main__':    
-    official_anagrams = get_anagrams("eng_dict.txt")
-    sorted_keys = sort_keys(official_anagrams)
+    official_anagrams = get_anagrams("eng_dict.txt") #calls the get_anagrams function to create the anagrams and saves those to the variable 'official_anagrams'
+    sorted_keys = sort_keys(official_anagrams) #calls the sort_keys function to sort the anagrams in official anagrams by key size
     #print(official_anagrams)
     #print(sorted_keys)
     for i in range(len(sorted_keys)):
