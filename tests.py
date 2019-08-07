@@ -47,12 +47,11 @@ def main():
 	anagrams = {
 		'eirsst' : ['sister', 'resist'],
 		'aenprt' : ['parent', 'entrap', 'trepan'],
-		'eelssv' : ['selves', 'vessel']
+		'eelss' : ['selves', 'vessel']
 	}
 
 	for key in anagrams.values():
-		print(len(key))
+		len(key)
 
-				
 
 main()

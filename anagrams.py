@@ -53,6 +53,7 @@ def get_anagrams(filename):
     # Creates empty Dictionaries
     anagrams ={}
     official_anagrams = {}
+    
     with open(filename, "r") as file: #opens a file to read
         words = file.read().splitlines() #reads the whole file and splits by line (in the case of the english dictionary, there is only one word per line). Then saves this list of lines to variable names words.
         for word in words: #goes through each word in the list of words
