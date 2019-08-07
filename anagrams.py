@@ -51,6 +51,37 @@ def sort_keys(anagrams):
             keys[i], keys[position] = keys[position], keys[i]
     return keys
 
+def sort_segment(keys):
+    #sorts the dictionary keys by length of their values
+    #if you want the sorted dictionary you should refrence the sorted keys list
+    for i in range(len(keys)):
+        smallest = len(keys[i])
+        position = i
+        for j in range(i+1, len(keys)):
+            if len(keys[j]) < smallest:
+                smallest = len(keys[j])
+                position = j
+        if not(position == i):
+            keys[i], keys[position] = keys[position], keys[i]
+    return keys
+
+def sort_wordlength(sorted_keys,anagrams):
+    #this function sorts the anagrams within the same size by length
+    curr_size = len(anagrams[sorted_keys[0]])
+    start = 0
+    end = 1
+    for i in range(len(sorted_keys)):
+        if curr_size != len(anagrams[sorted_keys[i]]):
+            sorted_keys[start:end] = sort_segment(sorted_keys[start:end])
+            start = i
+            end = i+1
+            curr_size = len(anagrams[sorted_keys[i]])
+        else:
+            end += 1
+    return sorted_keys
+
+
+
 def get_anagrams(filename):
     # Creates empty Dictionaries
     anagrams ={}
@@ -78,9 +109,11 @@ if __name__ == '__main__':
     #starts the program and calls all the functions
     official_anagrams = get_anagrams("eng_dict.txt") 
     sorted_keys = sort_keys(official_anagrams)
+    sorted_wordlengths = sort_wordlength(sorted_keys, official_anagrams)
     #print(official_anagrams)
     #print(sorted_keys)
     for i in range(len(sorted_keys)):
-        print(official_anagrams[sorted_keys[i]])
-        #pass
+        print('Length of list: ', len(official_anagrams[sorted_wordlengths[i]]), end=' ')
+        print('Length of key: ', len(sorted_wordlengths[i]))
+        pass
 
