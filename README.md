@@ -19,6 +19,7 @@ Ismail Youssou - iyoussou@uchicago.edu
     - Emily and Sophia worked on presentation
     - Ismail added comments.
     - Sophia worked on code.
+    - Ismail and Sophia added test functions.
 
 # Instructions
     - Type 'python anagrams.py' into terminal and press enter
