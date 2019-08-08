@@ -107,9 +107,9 @@ def get_anagrams(filename):
     return official_anagrams
 
 def cool_stuff():
-    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2. \nType Another number to exit."))
+    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, Type Any other number to exit."))
     if  intent == 1:
-        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting \nType Another number to exit."))
+        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting \nType Any other number to exit."))
         if which == 1:
             yo.anaception()
         elif which == 2:
@@ -132,7 +132,7 @@ if __name__ == '__main__':
         # print('Length of list: ', len(official_anagrams[sortedkeys_by_wordlengths[i]]), end=' ')
         # print('Length of key: ', len(sortedkeys_by_wordlengths[i]))
         pass
-    having_fun = cool_stuff()
+    cool_stuff()
  
 
 
