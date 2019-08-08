@@ -97,7 +97,7 @@ def anaception():
             print(impress)
             print("\n**** Here are the interesting Angagrams ****\n")
             print(anagrams_cool)
-    return
+    return anagrams
 
 def anumber():
     try:
@@ -114,4 +114,5 @@ def anumber():
         if num == sum([ord(i) for i in what]):
             impress.append(key)
     print(impress)
-    return
+    return impress
+
