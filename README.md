@@ -12,12 +12,13 @@ Ismail Youssou - iyoussou@uchicago.edu
     -Branson worked on code.
     -Sophia updated README file.
     -Emily created and worked on presentation slides.
-    -Sophia worked on code.
 # Day 3:
     - All group members used lab time in order to finalize the code for the anagrams function 
     - Emily updated README file
     - Sophia added a sorting keys funtion
     - Emily and Sophia worked on presentation
+    - Ismail added comments.
+    - Sophia worked on code.
 
 # Instructions
     - Type 'python anagrams.py' into terminal and press enter
@@ -31,4 +32,3 @@ Ismail Youssou - iyoussou@uchicago.edu
         -
     - If you choose Numbers:
         - 
-    
