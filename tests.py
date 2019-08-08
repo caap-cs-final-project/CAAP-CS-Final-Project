@@ -94,4 +94,67 @@ def anaception():
 			print("\n**** Here are the interesting Angagrams ****\n")
 			print(anagrams_cool)
 anaception()
->>>>>>> 29fdc7e31bd2ed4af7e4d4a1a41c863e7446f81a
+
+def sort_keys():
+    anagrams = {
+        'eilnst' : ['enlist', 'listen', 'silent'],
+        'aenprt' : ['parent', 'entrap']
+    }
+    #sorts the dictionary keys by length of their values
+    #if you want the sorted dictionary you should refrence the sorted keys list
+    keys = list(anagrams.keys())
+    for i in range(len(keys)):
+        smallest = len(anagrams[keys[i]])
+        position = i
+        for j in range(i+1, len(keys)):
+            if len(anagrams[keys[j]]) < smallest:
+                smallest = len(anagrams[keys[j]])
+                position = j
+        if not(position == i):
+            keys[i], keys[position] = keys[position], keys[i]
+    return keys
+sort_keys()
+
+def sort_segment():
+    anagrams = {
+        'eilnst' : ['enlist', 'listen', 'silent'],
+        'aenprt' : ['parent', 'entrap']
+    }
+    keys = list(anagrams.keys())
+    #sorts the dictionary keys by length of their values
+    #if you want the sorted dictionary you should refrence the sorted keys list
+    for i in range(len(keys)):
+        smallest = len(keys[i])
+        position = i
+        for j in range(i+1, len(keys)):
+            if len(keys[j]) < smallest:
+                smallest = len(keys[j])
+                position = j
+        if not(position == i):
+            keys[i], keys[position] = keys[position], keys[i]
+    return keys
+sort_segment()
+
+def sort_wordlength(sorted_keys,anagrams):
+    anagrams = {
+        'eilnst' : ['enlist', 'listen', 'silent'],
+        'aenprt' : ['parent', 'entrap']
+    }
+    sorted_keys = {
+    	'aenprt' : ['parent', 'entrap'],
+    	'eilnst' : ['enlist', 'listen', 'silent']
+    }
+    #this function sorts the anagrams within the same size by length
+    curr_size = len(anagrams[sorted_keys[0]])
+    start = 0
+    end = 1
+    for i in range(len(sorted_keys)):
+        if curr_size != len(anagrams[sorted_keys[i]]):
+            sorted_keys[start:end] = sort_segment(sorted_keys[start:end])
+            start = i
+            end = i+1
+            curr_size = len(anagrams[sorted_keys[i]])
+        else:
+            end += 1
+    return sorted_keys
+sort_wordlength()
