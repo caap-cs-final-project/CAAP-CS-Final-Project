@@ -88,11 +88,13 @@ def cool_stuff():
         
 if __name__ == '__main__': 
     #starts the program and calls all the functions
-    print("\t\t\t\tANAGRAMS from the English Dictionary!!")
-    print("\n")
     official_anagrams = get_anagrams("eng_dict.txt") 
     sorted_keys = sort_keys(official_anagrams)
     sortedkeys_by_wordlengths = sort_wordlength(sorted_keys, official_anagrams)
+    length = len(sorted_keys)
+   
+    print("There are", length, "ANAGRAMS in the Dictionary!!")
+    print("\n")
     try:
         format = int(input("Would you like to view them line by line, or all together?\n{1} Line by Line\n{2} All together\n{Any other number} Exit Program\nInput: "))
     except:
