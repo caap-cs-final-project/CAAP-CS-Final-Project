@@ -31,6 +31,7 @@ Ismail Youssou - iyoussou@uchicago.edu
     - If you decide to view interesting anagrams you will be prompted to choose which ones you would like to see.
     - Your choices are Anaception, Numbers, or exit the program.
     - If you choose Anaception:
-        -
+        -The function finds either all of the anagrams with subanagrams of a given size or greater, or all of the anagrams with a a subword            of a given size or greater. The result should be a list of anagrams and hashs/words (depending on the route chosen).
     - If you choose Numbers:
-        - 
+        - The function finds words wich have the same numerical value as a word which is given.
+     
