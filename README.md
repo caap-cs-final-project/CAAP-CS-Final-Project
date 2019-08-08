@@ -29,7 +29,17 @@ Day 3:
     - Emily and Sophia worked on presentation
 
 # Instructions
-Concise instructions on how we should run the program and what the results should look like:
+    - Type 'python anagrams.py' into terminal and press enter
+    - It should print the sorted anagrams.
+    - When prompted reply if you would like to view interesting anagrams or not.
+        -Simply type 1 if you would or any other number if you don't want to
+        -If you choose you don't want to you will just exit the program.
+    - If you decide to view interesting anagrams you will be prompted to choose which ones you would like to see.
+    - Your choices are Anaception, Numbers, or exit the program.
+    - If you choose Anaception:
+        -
+    - If you choose Numbers:
+        - 
     
 <<<<<<< HEAD
 >>>>>>> 54b1d3ea53d8fe55f523210c06ecd4923748bb4b

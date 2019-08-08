@@ -106,28 +106,48 @@ def get_anagrams(filename):
             official_anagrams.update(j)
             
     return official_anagrams
-    
+
+def cool_stuff():
+    intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, Type Any other number to exit.\nInput: "))
+    if  intent == 1:
+        which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting \nType Any other number to exit.\nInput: "))
+        if which == 1:
+            yo.anaception()
+        elif which == 2:
+            yo.anumber()
+        else:
+            exit("\nGoodbye!")
+    else:
+        exit("\nGoodbye!")
+    return
+
+        
 if __name__ == '__main__': 
     #starts the program and calls all the functions
+    print("\t\t\t\tANAGRAMS from the English Dictionary!!")
+    print("\n")
     official_anagrams = get_anagrams("eng_dict.txt") 
     sorted_keys = sort_keys(official_anagrams)
-    sorted_wordlengths = sort_wordlength(sorted_keys, official_anagrams)
-    #print(official_anagrams)
-    #print(sorted_keys)
-    for i in range(len(sorted_keys)):
-        print('Length of list: ', len(official_anagrams[sorted_wordlengths[i]]), end=' ')
-        print('Length of key: ', len(sorted_wordlengths[i]))
-        pass
-
-intent = int(input("If you would like to see some interesting anagrams, enter 1. If not, enter 2."))
-if  intent == 1:
-    which = int(input("Select a function: \n1.) Ananception | 2.) Number_Interesting"))
-    if which == 1:
-        yo.anaception()
-    elif which == 2:
-        yo.anumber()
+    sortedkeys_by_wordlengths = sort_wordlength(sorted_keys, official_anagrams)
+    try:
+        format = int(input("Would you like to view them line by line, or all together?\n{1} Line by Line\n{2} All together\n{Any other number} Exit Program\nInput: "))
+    except:
+        print("Please enter a number!")
+    if format == 1:
+        for i in range(len(sorted_keys)):
+            print("ANAGRAM LETTERS:",sortedkeys_by_wordlengths[i], " -> WORDS:", official_anagrams[sortedkeys_by_wordlengths[i]])
+            pass
+    elif format == 2:
+        for i in range(len(sorted_keys)): 
+            print("ANAGRAM LETTERS:",sortedkeys_by_wordlengths[i], " -> WORDS:", official_anagrams[sortedkeys_by_wordlengths[i]], "\t...........\t", end ='')
+            # print('Length of list: ', len(official_anagrams[sortedkeys_by_wordlengths[i]]), end=' ')
+            # print('Length of key: ', len(sortedkeys_by_wordlengths[i]))
+            pass
     else:
-        print("Goodbye")
-else:
-    print("Goodbye")
+        exit("\nGOODBYE!")
+    print("\n\n")
+    cool_stuff()
+    print("GOODBYE!")
+ 
+
 
