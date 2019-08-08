@@ -3,6 +3,44 @@ anagrams = {}
 anagrams_final = {}
 word_list = []
 
+#testing main function
+def main():
+    print("\t\t\t\tANAGRAMS from the English Dictionary!!")
+    print("\n")
+    official_anagrams = {'key1' : [0,1,2], 'key2' : [1,2,3], 'key3' : [3,2,1]}
+    sorted_keys = ['key1', 'key2', 'key3']
+    try:
+        format = int(input("Would you like to view them line by line, or all together?\n{1} Line by Line\n{2} All together\n{Any other number} Exit Program\nInput: "))
+    except:
+        print("Please enter a number!")
+    if format == 1:
+        for i in range(len(sorted_keys)):
+            print("ANAGRAM LETTERS:",sorted_keys[i], " -> WORDS:", official_anagrams[sorted_keys[i]])
+            pass
+    elif format == 2:
+        for i in range(len(sorted_keys)): 
+            print("ANAGRAM LETTERS:",sorted_keys[i], " -> WORDS:", official_anagrams[sorted_keys[i]], "\t...........\t", end ='')
+            # print('Length of list: ', len(official_anagrams[sortedkeys_by_wordlengths[i]]), end=' ')
+            # print('Length of key: ', len(sortedkeys_by_wordlengths[i]))
+            pass
+    else:
+        exit("\nGOODBYE!")
+    print("\n\n")
+    print("calling another function")
+    print("GOODBYE!")
+main()
+ 
+
+
+
+
+
+
+
+
+
+
+
 def __init__():
 	with open("eng_dict.txt", "r") as file:
 			global anagrams
@@ -93,4 +131,3 @@ def anaception():
 			print(impress)
 			print("\n**** Here are the interesting Angagrams ****\n")
 			print(anagrams_cool)
-anaception()
