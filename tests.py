@@ -30,17 +30,6 @@ def main():
     print("GOODBYE!")
 main()
  
-
-
-
-
-
-
-
-
-
-
-
 def __init__():
 	with open("eng_dict.txt", "r") as file:
 			global anagrams
