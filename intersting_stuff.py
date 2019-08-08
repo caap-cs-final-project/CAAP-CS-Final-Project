@@ -114,6 +114,5 @@ def anumber():
         if num == sum([ord(i) for i in what]):
             impress.append(key)
     print(impress)
-    return(impress)
-
+    return impress
 
